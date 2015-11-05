@@ -1,0 +1,45 @@
+body
+{
+	width: 100%;
+	max-width: 2000px;
+}
+.justificado
+{
+	text-align: justify;
+}
+
+.row
+{
+	width: 100%;	
+	
+}
+.titulo
+{
+	width: 100%;
+	text-align: center;
+}
+.table
+{
+	width: 100%;
+	text-align: left;
+}
+
+.usuarios img
+{
+	width: 100px;
+	height: 100px;
+}
+.container img
+{
+	width: 100%;
+}
+.jumbotron 
+{
+	width: 100%;
+	text-align: center;
+}
+.biomedica img
+{
+	width: 100px;
+	height: 100px;
+}
