@@ -8,6 +8,7 @@ use app\models\CorrectivasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Equipos;
 
 /**
  * CorrectivasController implements the CRUD actions for Correctivas model.
@@ -25,7 +26,18 @@ class CorrectivasController extends Controller
             ],
         ];
     }
-
+ public function actionCambio() {
+     $id=$_POST['valor'];
+     $model1 = Equipos::findOne($id);
+     if ($model1 !== null) {
+            return $this->redirect(['create','model' => $model1, 'id' => $id]);
+        }
+        else
+        {
+            return 2;
+        }
+     
+ }
     /**
      * Lists all Correctivas models.
      * @return mixed
@@ -64,12 +76,15 @@ class CorrectivasController extends Controller
     public function actionCreate()
     {
         $model = new Correctivas();
-
+        $searchModel = new CorrectivasSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_correctiva]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'dataProvider' => $dataProvider,
+                
             ]);
         }
     }
@@ -105,6 +120,7 @@ class CorrectivasController extends Controller
 
         return $this->redirect(['index']);
     }
+   
 
     /**
      * Finds the Correctivas model based on its primary key value.

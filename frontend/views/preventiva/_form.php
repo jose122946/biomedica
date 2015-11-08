@@ -5,6 +5,7 @@ use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
 use app\models\Equipos;
+use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Preventivas */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,12 +19,36 @@ use app\models\Equipos;
 
 ];
 $equipos = Equipos::find()->all();
-$equiposlista = ArrayHelper::map($equipos,'id_equipo','clave_equipo');
+$equiposlista = ArrayHelper::map($equipos,'id_equipo','numinv');
 ?>
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'id_equipo')->dropDownList($equiposlista,['prompt' => 'Seleccione el equipo'])->label('Equipo') ?>
-
+<?if(isset($_GET['id']))
+    { 
+    $model->id_equipo = $_GET['id'];
+    }?>
+    <?= $form->field($model, 'id_equipo')->dropDownList($equiposlista,['prompt' => 'Seleccione el equipo',
+        'onchange' => '$.post("'.Yii::$app->urlManager->createUrl(["preventiva/cambio"]).'",{valor:value},
+    function(data) {
+      $("#contenedor1").html(data);
+              })'])->label('Equipo') ?>
+<?if(isset($model)){
+      echo DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            
+            'idEquipo.nombre_equipo',
+            'idEquipo.clave_equipo',
+            'idEquipo.modelo',
+            'idEquipo.idArea.nombre_area',
+            'idEquipo.descripcionins',
+            'idEquipo.descripcionesp',
+            'idEquipo.marca',
+            'idEquipo.fisico'
+        ],
+    ]);}else
+    {
+        echo 1;
+    } ?>
     <?= $form->field($model, 'fecha_inicio')->textInput()->widget(DatePicker::className(),[
     'language' => 'es',
     'dateFormat' => 'yyyy-MM-dd',

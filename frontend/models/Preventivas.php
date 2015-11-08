@@ -48,6 +48,11 @@ class Preventivas extends \yii\db\ActiveRecord
             'fecha_inicio' => 'Fecha Inicio',
             'dias' => 'Dias',
             'estado' => 'Estado',
+            'idEquipo.clave_equipo' => 'Clave institucional',
+            'idEquipo.idArea.nombre_area' => 'Área',
+            'idEquipo.descripcionins' => 'Descipción institucional',
+            'idEquipo.descripcionesp' => 'Descripción específica',
+            'idEquipo.fisico' => 'Estado físico' 
         ];
     }
 

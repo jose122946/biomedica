@@ -54,6 +54,11 @@ class Correctivas extends \yii\db\ActiveRecord
             'estado' => 'Estado',
             'diagnostico' => 'Diagnostico',
             'reparacion' => 'Reparacion',
+            'idEquipo.clave_equipo' => 'Clave institucional',
+            'idEquipo.idArea.nombre_area' => 'Área',
+            'idEquipo.descripcionins' => 'Descipción institucional',
+            'idEquipo.descripcionesp' => 'Descripción específica',
+            'idEquipo.fisico' => 'Estado físico' 
         ];
     }
 

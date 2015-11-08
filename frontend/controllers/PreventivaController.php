@@ -8,6 +8,7 @@ use app\models\PreventivasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Equipos;
 
 /**
  * PreventivaController implements the CRUD actions for Preventivas model.
@@ -40,7 +41,19 @@ class PreventivaController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    public function actionCambio()
+    {
+        $id = $_POST['valor'];
+        $model = Equipos::findOne($id);
+        if ($model !== null) {
+           return $this->redirect(['create','id' =>$id,'model' => $model]);
+        }
+        else
+        {
+            return 1;
+        }
 
+    }
     /**
      * Displays a single Preventivas model.
      * @param integer $id

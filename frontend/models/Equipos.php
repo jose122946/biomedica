@@ -18,6 +18,7 @@ use app\models\Equipos;
  * @property integer $marca
  * @property integer $fisico
  * @property Areas $idArea
+ * @property Areas $numinv
  * @property Correctivas[] $correctivas
  * @property Preventivas[] $preventivas
  * @property Solicitud[] $solicituds
@@ -40,9 +41,9 @@ class Equipos extends \yii\db\ActiveRecord
         return [
             [['nombre_equipo', 'clave_equipo', 'modelo', 'id_area'], 'required', 'message' => 'No puede estar vacio'],
             [['id_area'], 'integer'],
-            [['clave_equipo'],'unique', 'targetClass' => Equipos::className(), 'message' => 'La clave de equipo ya esta en uso.'],
+            [['numinv'],'unique', 'targetClass' => Equipos::className(), 'message' => 'La clave de equipo ya esta en uso.'],
             [['nombre_equipo', 'clave_equipo', 'modelo'], 'string', 'max' => 255],
-            [['descripcionins','descripcionesp','marca','fisico'],'safe',]
+            [['descripcionins','descripcionesp','marca','fisico','numinv'],'safe',]
         ];
     }
 
@@ -57,6 +58,8 @@ class Equipos extends \yii\db\ActiveRecord
             'clave_equipo' => 'Clave Equipo',
             'modelo' => 'Modelo',
             'id_area' => 'Id Area',
+            'numinv' => 'Numero de inventario',
+            'marca' => 'Marca',
 
         ];
     }

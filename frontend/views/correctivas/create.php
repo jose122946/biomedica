@@ -1,8 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\ListView;
 use yii\widgets\DetailView;
-
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Correctivas */
@@ -15,10 +16,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+	<?Pjax::begin(['enablePushState' => true,'enableReplaceState' => true]);?>
     <?= $this->render('_form', [
         'model' => $model,
+
     ]) ?>
-<??>
+    
+    <?if (isset($data)) {
+    	echo $data;
+    }?>
+ <?// ListView::widget([
+// 	'dataProvider' => $dataProvider,
+// 	'itemView' => 'view',
+// ]);?>
+ 
+<?Pjax::end();?>
      <? //DetailView::widget([
     //     'model' => $model,
     //     'attributes' => [
@@ -31,7 +43,8 @@ $this->params['breadcrumbs'][] = $this->title;
     //         'idEquipo.marca',
     //         'idEquipo.fisico'
     //     ],
-    // ]) ?>
-    <div id = "contenedor"></div>
+    // ]) 
+     ?>
+    <div id = "contenedor1"></div>
 
 </div>

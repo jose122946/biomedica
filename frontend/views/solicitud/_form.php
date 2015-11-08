@@ -8,7 +8,8 @@ use yii\helpers\ArrayHelper;
 use yii\jui\AutoComplete;
 use yii\web\JsExpression;
 use yii\widgets\Pjax;
-use yii\widgets\ListView; 
+use yii\widgets\DetailView;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Solicitud */
 /* @var $form yii\widgets\ActiveForm */
@@ -36,9 +37,13 @@ use yii\widgets\ListView;
        ->where(['id_area' => Yii::$app->user->identity->id_departamento])
        ->all();
    }
-       $equiposlista = ArrayHelper::map($equipos,'id_equipo','clave_equipo');?>
-   
+       $equiposlista = ArrayHelper::map($equipos,'id_equipo','numinv');?>
+      
 
+    <?if(isset($_GET['id']))
+    { 
+    $model->id_equipo = $_GET['id'];
+    }?>
     <?= /*$form->field($model, 'id_equipo')->widget(Autocomplete::className(),['clientOptions' =>['source' => $data,
     	'name' => 'equipo',
     	'id' => 'ddd'],
@@ -46,7 +51,29 @@ use yii\widgets\ListView;
 
      */
 
-    $form->field($model, 'id_equipo')->dropDownList($equiposlista,['prompt' => 'Seleccione el equipo'])->label('Equipo')?>
+    $form->field($model, 'id_equipo')->dropDownList($equiposlista,['prompt' => 'Seleccione el equipo',
+      'onchange' => '$.post("'.Yii::$app->urlManager->createUrl(["solicitud/cambio"]).'",{valor:value},
+    function(data) {
+      $("#contenedor1").html(data);
+              })'])->label('Equipo')?>
+              <?if(isset($model)){
+      echo DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            
+            'idEquipo.nombre_equipo',
+            'idEquipo.clave_equipo',
+            'idEquipo.modelo',
+            'idEquipo.marca',
+            'idEquipo.idArea.nombre_area',
+            'idEquipo.descripcionins',
+            'idEquipo.descripcionesp',
+            'idEquipo.fisico'
+        ],
+    ]);}else
+    {
+        echo 1;
+    } ?>
     <?= $form->field($model, 'id_area')->hiddenInput(['value' => Yii::$app->user->identity->id_departamento])->label(false); ?>
 
     <?// $form->field($model, 'estado')->textInput(['maxlength' => true]) ?>

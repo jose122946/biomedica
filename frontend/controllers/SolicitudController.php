@@ -8,6 +8,7 @@ use app\models\SolicitudSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Equipos;
 
 /**
  * SolicitudController implements the CRUD actions for Solicitud model.
@@ -88,6 +89,8 @@ class SolicitudController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             if ($model->estado == 'Aceptado') {
+                $idequipo = $model->id_equipo;
+                $model->sendMail($idequipo);
                 return $this->redirect(['/correctivas/create', 'id' => $model->id_equipo]);
             }
             else
@@ -113,7 +116,18 @@ class SolicitudController extends Controller
 
         return $this->redirect(['index']);
     }
-
+    public function actionCambio()
+    {
+        $id = $_POST['valor'];
+        $model = Equipos::findOne($id);
+        if ($model !== null) {
+            return $this->redirect(['create', 'id' => $id, 'model' =>$model]);
+        }
+        else
+        {
+            return 1;
+        }
+    }
     /**
      * Finds the Solicitud model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

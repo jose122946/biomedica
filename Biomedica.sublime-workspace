@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"json",
+				"json_encode"
+			],
+			[
+				"read",
+				"ready	$(document).ready"
+			],
+			[
+				"corre",
+				"CorrectivasController"
+			],
+			[
+				"des",
+				"descripcionesp"
+			],
+			[
 				"in",
 				"inttermino"
 			],
@@ -491,7 +507,7 @@
 			"file": "frontend/views/layouts/main.php",
 			"settings":
 			{
-				"buffer_size": 4320,
+				"buffer_size": 4393,
 				"line_ending": "Unix"
 			}
 		},
@@ -507,7 +523,15 @@
 			"file": "frontend/web/css/estilo.css",
 			"settings":
 			{
-				"buffer_size": 383,
+				"buffer_size": 384,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "frontend/web/assets/5c3290b9/css/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 147427,
 				"line_ending": "Unix"
 			}
 		},
@@ -515,47 +539,23 @@
 			"file": "frontend/models/Equipos.php",
 			"settings":
 			{
-				"buffer_size": 2113,
+				"buffer_size": 2428,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/models/PreventivasSearch.php",
+			"file": "frontend/views/equipos/_form.php",
 			"settings":
 			{
-				"buffer_size": 1821,
+				"buffer_size": 1552,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/views/equipos/index.php",
+			"file": "frontend/views/equipos/view.php",
 			"settings":
 			{
-				"buffer_size": 1048,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/models/Preventivas.php",
-			"settings":
-			{
-				"buffer_size": 1211,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/correctivas/_form.php",
-			"settings":
-			{
-				"buffer_size": 1651,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/correctivas/view.php",
-			"settings":
-			{
-				"buffer_size": 1094,
+				"buffer_size": 1119,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,63 +563,32 @@
 			"file": "frontend/views/correctivas/create.php",
 			"settings":
 			{
-				"buffer_size": 429,
+				"buffer_size": 1222,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/views/solicitud/index.php",
+			"file": "frontend/web/js/script.js",
 			"settings":
 			{
-				"buffer_size": 1227,
+				"buffer_size": 167,
+				"line_ending": "Unix",
+				"name": "script.js"
+			}
+		},
+		{
+			"file": "frontend/controllers/CorrectivasController.php",
+			"settings":
+			{
+				"buffer_size": 3758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "common/models/LoginForm.php",
+			"file": "frontend/views/correctivas/_form.php",
 			"settings":
 			{
-				"buffer_size": 2010,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/site/login.php",
-			"settings":
-			{
-				"buffer_size": 1227,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/solicitud/_form.php",
-			"settings":
-			{
-				"buffer_size": 2335,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/controllers/EquiposController.php",
-			"settings":
-			{
-				"buffer_size": 3588,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/preventiva/create.php",
-			"settings":
-			{
-				"buffer_size": 439,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/site/biomedica.php",
-			"settings":
-			{
-				"buffer_size": 1558,
+				"buffer_size": 2422,
 				"line_ending": "Unix"
 			}
 		},
@@ -632,53 +601,10 @@
 			}
 		},
 		{
-			"file": "frontend/models/ContactForm.php",
+			"file": "frontend/models/PasswordResetRequestForm.php",
 			"settings":
 			{
-				"buffer_size": 1382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/site/contact.php",
-			"settings":
-			{
-				"buffer_size": 1482,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/solicitud/create.php",
-			"settings":
-			{
-				"buffer_size": 423,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/solicitud/update.php",
-			"settings":
-			{
-				"buffer_size": 571,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/solicitud/view.php",
-			"settings":
-			{
-				"buffer_size": 1003,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n\nnamespace app\\models;\n\nuse Yii;\nuse yii\\base\\Model;\nuse yii\\data\\ActiveDataProvider;\nuse app\\models\\Solicitud;\n//use app\\models\\Equipos;\n\n/**\n * SolicitudSearch represents the model behind the search form about `app\\models\\Solicitud`.\n */\nclass SolicitudSearch extends Solicitud\n{\n    /**\n     * @inheritdoc\n     */\n    public function rules()\n    {\n        return [\n            [['id_solicitud', 'id_equipo', 'id_area'], 'integer'],\n            [['estado', 'fecha'],'safe'],\n            [['nombre_equipo','nombre_area'],'safe'],\n        ];\n    }\n\n    /**\n     * @inheritdoc\n     */\n    public function scenarios()\n    {\n        // bypass scenarios() implementation in the parent class\n        return Model::scenarios();\n    }\n\n    /**\n     * Creates data provider instance with search query applied\n     *\n     * @param array $params\n     *\n     * @return ActiveDataProvider\n     */\n    public function search($params)\n    {\n        if (Yii::$app->user->identity->rol_id == 2) {\n        \n        $query = Solicitud::find();\n        }else\n        {\n            $query = Solicitud::find()\n            ->joinWith('idEquipo')\n            ->joinWith('idArea')\n            ->where(['Equipos.id_area' => Yii::$app->user->identity->id_departamento]);\n        }\n        $dataProvider = new ActiveDataProvider([\n            'query' => $query,\n        ]);\n        //$this->load($params);\n        \n       \n        $dataProvider->sort->attributes['idEquipo.nombre_equipo'] = [\n    'asc' => ['nombre_equipo' => SORT_ASC],\n    'desc' => ['nombre_equipo' => SORT_DESC],\n    ];\n     $dataProvider->sort->attributes['idArea.nombre_area'] = [\n    'asc' => ['nombre_area' => SORT_ASC],\n    'desc' => ['areas.nombre_area' => SORT_DESC],\n    ];\n\n\n       // if (!$this->validate()) {\n            // uncomment the following line if you do not want to return any records when validation fails\n            // $query->where('0=1');\n         //   return $dataProvider;\n        //}\n   \n        $query->andFilterWhere([\n            'id_solicitud' => $this->id_solicitud,\n            'id_equipo' => $this->id_equipo,\n            'id_area' => $this->id_area,\n            'fecha' => $this->fecha,\n            'Equipos.nombre_equipo' =>$this->idEquipo,\n        ]);\n\n        $query->andFilterWhere(['like', 'estado', $this->estado])\n        ->andFilterWhere(['like', 'nombre_equipo', $this->idEquipo])\n        /*->andFilterWhere(['like', 'nombre_area', $this->idEquipo])*/;\n        $query -> \n        return $dataProvider;\n    }\n}\n",
-			"file": "frontend/models/SolicitudSearch.php",
-			"file_size": 2486,
-			"file_write_time": 130903176736168757,
-			"settings":
-			{
-				"buffer_size": 2504,
+				"buffer_size": 1622,
 				"line_ending": "Unix"
 			}
 		},
@@ -686,62 +612,58 @@
 			"file": "frontend/models/Solicitud.php",
 			"settings":
 			{
-				"buffer_size": 1531,
+				"buffer_size": 2119,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/views/preventiva/index.php",
+			"file": "frontend/controllers/SolicitudController.php",
 			"settings":
 			{
-				"buffer_size": 1794,
+				"buffer_size": 3681,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/views/site/departamento.php",
+			"file": "common/mail/mailprueba.php",
 			"settings":
 			{
-				"buffer_size": 1551,
+				"buffer_size": 355,
+				"line_ending": "Unix",
+				"name": "mailprueba.php"
+			}
+		},
+		{
+			"file": "frontend/views/equipos/index.php",
+			"settings":
+			{
+				"buffer_size": 1091,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "frontend/views/correctivas/index.php",
+			"file": "frontend/views/solicitud/_form.php",
 			"settings":
 			{
-				"buffer_size": 1598,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/models/CorrectivasSearch.php",
-			"settings":
-			{
-				"buffer_size": 2022,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "frontend/views/preventiva/_form.php",
-			"settings":
-			{
-				"buffer_size": 1331,
+				"buffer_size": 2333,
 				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
-	"build_system_choices":
-	[
-	],
-	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "listvi",
 		"selected_items":
 		[
+			[
+				"lis",
+				"Snippet: Yii2 - ListView::widget"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"listvi",
 				"Snippet: Yii2 - ListView::widget"
@@ -799,15 +721,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 503.0
 	},
 	"console":
 	{
-		"height": 139.0,
-		"history":
-		[
-			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-		]
+		"height": 139.0
 	},
 	"distraction_free":
 	{
@@ -818,30 +736,40 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/opt/lampp/htdocs/biomedica/frontend",
-		"/opt/lampp/htdocs/biomedica/frontend/controllers",
-		"/opt/lampp/htdocs/biomedica/frontend/models",
-		"/opt/lampp/htdocs/biomedica/frontend/views",
-		"/opt/lampp/htdocs/biomedica/frontend/views/correctivas",
-		"/opt/lampp/htdocs/biomedica/frontend/views/equipos",
-		"/opt/lampp/htdocs/biomedica/frontend/views/preventiva",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site",
-		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud",
-		"/opt/lampp/htdocs/biomedica/common",
-		"/opt/lampp/htdocs/biomedica/common/models"
-	],
 	"file_history":
 	[
-		"/opt/lampp/htdocs/biomedica/frontend/controllers/SolicitudController.php",
-		"/opt/lampp/htdocs/biomedica/frontend/models/Preventivas.php",
+		"/opt/lampp/htdocs/biomedica/vendor/yiisoft/yii2-swiftmailer/Message.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/ResetPasswordForm.php",
+		"/opt/lampp/htdocs/urgencias/js/script.js",
+		"/opt/lampp/htdocs/biomedica/frontend/views/preventiva/_form.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/CorrectivasSearch.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/correctivas/index.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/site/departamento.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/preventiva/index.php",
-		"/opt/lampp/htdocs/biomedica/frontend/models/SolicitudSearch.php",
-		"/opt/lampp/htdocs/biomedica/frontend/models/RolSearch.php",
-		"/opt/lampp/htdocs/biomedica/frontend/controllers/SiteController.php",
 		"/opt/lampp/htdocs/biomedica/frontend/models/Solicitud.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/SolicitudSearch.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud/view.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud/update.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud/create.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/site/contact.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/ContactForm.php",
+		"/opt/lampp/htdocs/biomedica/frontend/controllers/SiteController.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/site/biomedica.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/preventiva/create.php",
+		"/opt/lampp/htdocs/biomedica/frontend/controllers/EquiposController.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud/_form.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/site/login.php",
+		"/opt/lampp/htdocs/biomedica/common/models/LoginForm.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/solicitud/index.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/correctivas/create.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/correctivas/view.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/correctivas/_form.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/Preventivas.php",
+		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/index.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/PreventivasSearch.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/Equipos.php",
+		"/opt/lampp/htdocs/biomedica/frontend/controllers/SolicitudController.php",
+		"/opt/lampp/htdocs/biomedica/frontend/models/RolSearch.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/_form.php",
 		"/opt/lampp/htdocs/biomedica/common/models/User.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/user/_form.php",
@@ -854,10 +782,8 @@
 		"/opt/lampp/htdocs/biomedica/frontend/views/rol/update.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/user/create.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/user/index.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/index.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/solicitudes.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/preventivas.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/departamento.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/correctivas.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/operacion/view.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/operacion/update.php",
@@ -868,9 +794,7 @@
 		"/opt/lampp/htdocs/biomedica/frontend/views/rol/_form.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/rol/create.php",
 		"/opt/lampp/htdocs/biomedica/frontend/models/Rol.php",
-		"/opt/lampp/htdocs/biomedica/frontend/controllers/EquiposController.php",
 		"/opt/lampp/htdocs/biomedica/frontend/controllers/UserController.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/contact.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/administrador.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/rol/index.php",
 		"/opt/lampp/htdocs/biomedica/common/models/AccessHelpers.php",
@@ -884,15 +808,12 @@
 		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/update.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/view.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/equipos/create.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/login.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/signup.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/resetPassword.php",
-		"/opt/lampp/htdocs/biomedica/frontend/models/ResetPasswordForm.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/requestPasswordResetToken.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/nuevopreventivo.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/nuevasolocitud.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/nuevasolicitud.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/biomedica.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/usuarios.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/index.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/equipos.php",
@@ -900,7 +821,6 @@
 		"/opt/lampp/htdocs/biomedica/frontend/views/site/about.php",
 		"/opt/lampp/htdocs/biomedica/frontend/views/layouts/main.php",
 		"/opt/lampp/htdocs/biomedica/frontend/models/NuevaSolicitud.php",
-		"/opt/lampp/htdocs/biomedica/frontend/models/ContactForm.php",
 		"/opt/lampp/htdocs/biomedica/Biomedica.sublime-project",
 		"/opt/lampp/htdocs/coreamex/validacionadmision.php",
 		"/opt/lampp/htdocs/coreamex/administrador.php",
@@ -945,23 +865,7 @@
 		"/opt/lampp/htdocs/coreamex2/frontend/models/search/PacienteSearch.php",
 		"/opt/lampp/htdocs/coreamex2/frontend/views/paciente/_form.php",
 		"/opt/lampp/htdocs/coreamex2/frontend/models/paciente.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/controllers/PacienteController.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/controllers/FichaController.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/views/paciente/index.php",
-		"/opt/lampp/htdocs/coreamex/visual.html",
-		"/opt/lampp/htdocs/coreamex2/frontend/views/ficha/_form.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/views/ficha/view.php",
-		"/opt/lampp/htdocs/coreamex/nuevoingreso.",
-		"/opt/lampp/htdocs/coreamex2/frontend/models/Paciente.php",
-		"/opt/lampp/htdocs/biomedica/frontend/web/css/estilo.css",
-		"/opt/lampp/htdocs/biomedica/common/models/LoginForm.php",
-		"/opt/lampp/htdocs/biomedica/frontend/web/assets/880f1025/css/bootstrap.css",
-		"/opt/lampp/htdocs/coreamex2/frontend/views/site/index.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/web/css/estilo.css",
-		"/opt/lampp/htdocs/coreamex2/frontend/controllers/SiteController.php",
-		"/opt/lampp/htdocs/coreamex2/frontend/models/Triage.php",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/usuarios",
-		"/opt/lampp/htdocs/biomedica/frontend/views/site/administrador"
+		"/opt/lampp/htdocs/coreamex2/frontend/controllers/PacienteController.php"
 	],
 	"find":
 	{
@@ -979,6 +883,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"script",
+			"valor",
+			"}\n",
 			"}?>\n",
 			"identity",
 			"nav",
@@ -1103,10 +1010,7 @@
 			"page3",
 			"h1",
 			"caja",
-			"icon-face",
-			"caja",
-			"contenedor",
-			"arriba"
+			"icon-face"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1177,13 +1081,12 @@
 	"groups":
 	[
 		{
-			"selected": 20,
+			"selected": 11,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "frontend/views/site/index.php",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1642,
@@ -1207,24 +1110,22 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "frontend/views/layouts/main.php",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4320,
+						"buffer_size": 4393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								134
+								4350,
+								4350
 							]
 						],
 						"settings":
@@ -1234,16 +1135,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2880.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
 					"file": "frontend/models/Correctivas.php",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1548,
@@ -1264,27 +1163,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 759.0,
+						"translation.y": 1067.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
 					"file": "frontend/web/css/estilo.css",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 383,
+						"buffer_size": 384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								333,
+								333
 							]
 						],
 						"settings":
@@ -1293,57 +1190,53 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 363.0,
+						"translation.y": 542.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "frontend/models/Equipos.php",
-					"semi_transient": false,
+					"file": "frontend/web/assets/5c3290b9/css/bootstrap.css",
 					"settings":
 					{
-						"buffer_size": 2113,
+						"buffer_size": 147427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								941,
-								941
+								93612,
+								93612
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 552.0,
+						"translation.y": 111550.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "frontend/models/PreventivasSearch.php",
-					"semi_transient": false,
+					"file": "frontend/models/Equipos.php",
 					"settings":
 					{
-						"buffer_size": 1821,
+						"buffer_size": 2428,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1168,
-								1168
+								1674,
+								1674
 							]
 						],
 						"settings":
@@ -1353,27 +1246,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 897.0,
+						"translation.y": 864.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "frontend/views/equipos/index.php",
-					"semi_transient": false,
+					"file": "frontend/views/equipos/_form.php",
 					"settings":
 					{
-						"buffer_size": 1048,
+						"buffer_size": 1552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								964,
-								964
+								587,
+								587
 							]
 						],
 						"settings":
@@ -1382,28 +1273,26 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 345.0,
+						"translation.x": 271.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "frontend/models/Preventivas.php",
-					"semi_transient": false,
+					"file": "frontend/views/equipos/view.php",
 					"settings":
 					{
-						"buffer_size": 1211,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								655,
-								655
+								772,
+								772
 							]
 						],
 						"settings":
@@ -1413,27 +1302,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 966.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "frontend/views/correctivas/_form.php",
-					"semi_transient": false,
+					"file": "frontend/views/correctivas/create.php",
 					"settings":
 					{
-						"buffer_size": 1651,
+						"buffer_size": 1222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1519,
-								1519
+								577,
+								577
 							]
 						],
 						"settings":
@@ -1443,85 +1330,80 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1000.0,
+						"translation.y": 422.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "frontend/views/correctivas/view.php",
-					"semi_transient": false,
+					"file": "frontend/web/js/script.js",
 					"settings":
 					{
-						"buffer_size": 1094,
+						"buffer_size": 167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								927,
-								927
+								160,
+								160
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "script.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 333.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "frontend/views/correctivas/create.php",
-					"semi_transient": false,
+					"file": "frontend/controllers/CorrectivasController.php",
 					"settings":
 					{
-						"buffer_size": 429,
+						"buffer_size": 3758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								134
+								815,
+								815
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
 					"type": "text"
 				},
 				{
 					"buffer": 11,
-					"file": "frontend/views/solicitud/index.php",
-					"semi_transient": false,
+					"file": "frontend/views/correctivas/_form.php",
 					"settings":
 					{
-						"buffer_size": 1227,
+						"buffer_size": 2422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								663,
-								663
+								1298,
+								1298
 							]
 						],
 						"settings":
@@ -1531,194 +1413,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 414.0,
+						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 12,
-					"file": "common/models/LoginForm.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2010,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								680,
-								680
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "frontend/views/site/login.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								605,
-								605
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 69.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "frontend/views/solicitud/_form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2240,
-								2240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1311.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "frontend/controllers/EquiposController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3588,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1706,
-								1706
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 759.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "frontend/views/preventiva/create.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145,
-								145
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "frontend/views/site/biomedica.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								215,
-								215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 184.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
 					"file": "frontend/controllers/SiteController.php",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 7313,
@@ -1728,8 +1430,8 @@
 						"selection":
 						[
 							[
-								2472,
-								2472
+								6259,
+								6259
 							]
 						],
 						"settings":
@@ -1739,27 +1441,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3243.0,
+						"translation.y": 4104.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
-					"file": "frontend/models/ContactForm.php",
-					"semi_transient": false,
+					"buffer": 13,
+					"file": "frontend/models/PasswordResetRequestForm.php",
 					"settings":
 					{
-						"buffer_size": 1382,
+						"buffer_size": 1622,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								273,
-								273
+								1191,
+								1191
 							]
 						],
 						"settings":
@@ -1767,175 +1467,27 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "frontend/views/site/contact.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1035,
-								1035
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 483.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "frontend/views/solicitud/create.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 423,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
-					"file": "frontend/views/solicitud/update.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 571,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								126,
-								126
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "frontend/views/solicitud/view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1003,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								664,
-								664
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "frontend/models/SolicitudSearch.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2504,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2465,
-								2465
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1518.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
+					"buffer": 14,
 					"file": "frontend/models/Solicitud.php",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1531,
+						"buffer_size": 2119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1413,
-								1413
+								2110,
+								2110
 							]
 						],
 						"settings":
@@ -1944,28 +1496,26 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 897.0,
+						"translation.x": 0.0,
+						"translation.y": 1512.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
-					"file": "frontend/views/preventiva/index.php",
-					"semi_transient": false,
+					"buffer": 15,
+					"file": "frontend/controllers/SolicitudController.php",
 					"settings":
 					{
-						"buffer_size": 1794,
+						"buffer_size": 3681,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								519,
-								519
+								2449,
+								2449
 							]
 						],
 						"settings":
@@ -1974,58 +1524,53 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 276.0,
+						"translation.x": 66.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
-					"file": "frontend/views/site/departamento.php",
-					"semi_transient": false,
+					"buffer": 16,
+					"file": "common/mail/mailprueba.php",
 					"settings":
 					{
-						"buffer_size": 1551,
+						"buffer_size": 355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								277
+								355,
+								355
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "mailprueba.php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
-					"file": "frontend/views/correctivas/index.php",
-					"semi_transient": false,
+					"buffer": 17,
+					"file": "frontend/views/equipos/index.php",
 					"settings":
 					{
-						"buffer_size": 1598,
+						"buffer_size": 1091,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								975,
+								975
 							]
 						],
 						"settings":
@@ -2035,70 +1580,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
-					"file": "frontend/models/CorrectivasSearch.php",
-					"semi_transient": false,
+					"buffer": 18,
+					"file": "frontend/views/solicitud/_form.php",
 					"settings":
 					{
-						"buffer_size": 2022,
+						"buffer_size": 2333,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								951,
-								951
+								1047,
+								1047
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 828.0,
+						"translation.y": 831.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "frontend/views/preventiva/_form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1183,
-								1183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 310.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
 					"type": "text"
 				}
 			]
@@ -2143,8 +1655,6 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
-	"project": "Biomedica.sublime-project",
 	"replace":
 	{
 		"height": 72.0
@@ -2153,7 +1663,6 @@
 	"select_file":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -2162,32 +1671,15 @@
 	"select_project":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
-	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"selected_group": 0,
-	"settings":
-	{
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 207.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"status_bar_visible": true
 }
